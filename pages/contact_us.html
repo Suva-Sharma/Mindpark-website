@@ -6,6 +6,7 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="/css/contact_us.css">
     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    
 </head>
 <body>
     <nav>
@@ -24,35 +25,77 @@
     </nav>
 
     <main>
-        <!-- Left section -->
         <div class="section left">
             <h1>Contact Us</h1>
+            <div class="contact-info">
+                <!-- <div class="icons">
+                    <img src="/images/email.png" alt="">
+                    <img src="/images/phone.png" alt="">
+                    <img src="/images/location.png" alt="">
+                </div>
+                <div class="items">
+                    <h2>Email</h2>
+                    <p>contact@mindpark.app</p>
+                    <h2>Phone</h2>
+                    <p>+977-9813831998</p>
+                    <h2>Location</h2>
+                    <p>Bhaisepati, Lalitpur, Nepal</p>
+                </div> -->
+                <div class="contact-info-tiles">
+                    <div class="tiles-content">
+                        <div class="tiles-row">
+                            <div class="tiles-left">
+                                <img src="/images/email.png" height="75" width="75"/>
+                            </div>
+                            <div class="tiles-right">
+                                <div class="tiles-right-column">
+                                    <h2>Email</h2>
+                                    <p>mindpark@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiles-row">
+                            <div class="tiles-left">
+                                <img src="/images/phone.png" height="75" width="75"/>
+                            </div>
+                            <div class="tiles-right">
+                                <div class="tiles-right-column">
+                                    <h2>Phone</h2>
+                                    <p>+977-9813831998</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tiles-row">
+                            <div class="tiles-left">
+                                <img src="/images/location.png" height="75" width="75"/>
+                            </div>
+                            <div class="tiles-right">
+                                <div class="tiles-right-column">
+                                    <h2>Location</h2>
+                                    <p>Bhaisepati, Lalitpur, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
             
-            <h2>Email</h2>
-            <p>contact@mindpark.app</p>
-
-            <h2>Phone</h2>
-            <p>+977-9813831998</p>
-
-            <h2>Location</h2>
-            <p>Bhaisepati, Lalitpur, Nepal</p>
         </div>
 
-        <!-- Right section -->
         <div class="section right">
             <h1>Lets Talk</h1>
             <div class="contact-form">
                 <label for="full-name">Full name</label>
                 <input type="text" name="full-name" placeholder="Enter full name">
-
                 <label for="email">Email</label>
                 <input type="email" name="email" placeholder="Enter email address">
-
-                <label for="phone-number">Phone Number</label>
+                <label for="phone-number">Phone number</label>
                 <input type="number" name="phone-number" placeholder="Enter phone number">
-
                 <label for="message">Message</label>
-                <input type="text" name="message" placeholder="Enter your message here">
+                <textarea id="text-area" rows="10" cols="33" name="message" placeholder="Enter your message here" class="message"></textarea>
             </div>
         </div>
     </main>

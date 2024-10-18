@@ -64,15 +64,126 @@ main{
 
         .section{
             width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             &.right{
+                height: 100vh;
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1{
+                    color: #F59182;
+                    margin-bottom: 50px;                   
+                    font-size: 2.5rem; 
+                }
+
                 .contact-form{
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
                     margin: 10px;
+                    gap: 10px;
+                    
+                    label{
+                        /* margin-left: 15px;
+                        margin-top: 15px; */
+                        font-size: 16px;
+                        letter-spacing: -.5px;
+                    }
+
+                    input{
+                        border: none;
+                        border-radius: 70px;
+                        width: 270px;
+                        height: 50px;
+                        padding: 15px;
+                        margin-top: 10px 0px 0px 10px;
+                    }
+
+                    input::placeholder{
+                        color: lightgray;
+                        font-size: 16px;
+                    }
+
+                   textarea{
+                    border: none;
+                    border-radius: 10px;
+                    resize: none;
+                    padding: 10px;
+                   }
+
+                   textarea::placeholder{
+                    color: lightgray;
+                    font-size: 16px;
+                   }
                 }
             }
-        }
-    
-    
+
+            &.left {
+                background-color: #F3F3F3; /* Light gray background */
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 50px;
+        
+                h1 {
+                    color: #379683;
+                    font-size: 2.5rem; /* Larger heading */
+                    margin-bottom: 50px; /* Add spacing below the heading */
+                }
+        
+                .contact-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 20px; /*Space between each contact info section*/
+        
+                    .icons {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px; /* Space between icons */
+        
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+        
+                    .items {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+        
+                        h2 {
+                            font-size: 1.2rem;
+                            margin: 0;
+                        }
+        
+                        p {
+                            font-size: 1rem;
+                            margin: 5px 0 20px 0;
+                        }
+                    }
+                }
+            }
+        }   
+}
+
+.tiles-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+.tiles-row {
+    display: flex;
+    column-gap: 80px;
+    flex-direction: row;
+    align-items: center;
 }
