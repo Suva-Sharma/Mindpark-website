@@ -61,6 +61,7 @@ body{
 
 main{
     display: flex;
+    flex-direction: row;
 
         .section{
             width: 50%;
@@ -70,7 +71,7 @@ main{
 
             &.right{
                 height: 100vh;
-                padding: 50px;
+                padding: 25px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -78,7 +79,7 @@ main{
                 h1{
                     color: #F59182;
                     margin-bottom: 50px;                   
-                    font-size: 2.5rem; 
+                    font-size: 60px; 
                 }
 
                 .contact-form{
@@ -87,16 +88,61 @@ main{
                     justify-content: center;
                     margin: 10px;
                     gap: 10px;
+
+                    .full-name{
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 20px;
+                    }
+                    .email{
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 20px;
+                    }
+                    .phone{
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 20px;
+                    }
+                    .message-box{
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 20px;
+                    }
+
+                    .submit-btn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 50px;
+
+                        button{
+                            width: 150px;
+                            height: 50px;
+                            font-size: 16px;
+                            background-color: #F59182;
+                            color: white;
+                            border-radius: 50px;
+                            border: none;
+                        }
+
+                        button:hover{
+                            background-color: #f47663;
+                            color: white;
+                            transition: .2s;
+                        }
+                    }
                     
                     label{
-                        /* margin-left: 15px;
-                        margin-top: 15px; */
+                        margin-left: 15px; 
+                        margin-bottom: 10px;
                         font-size: 16px;
                         letter-spacing: -.5px;
                     }
 
                     input{
                         border: none;
+                        outline: none;
                         border-radius: 70px;
                         width: 270px;
                         height: 50px;
@@ -109,8 +155,13 @@ main{
                         font-size: 16px;
                     }
 
+                    input:focus{
+                        color: green;
+                    }
+
                    textarea{
                     border: none;
+                    outline: none;
                     border-radius: 10px;
                     resize: none;
                     padding: 10px;
@@ -125,15 +176,16 @@ main{
 
             &.left {
                 background-color: #F3F3F3; /* Light gray background */
-                height: 100vh;
+                height: 118vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 50px;
+                padding: 25px;
+              
         
                 h1 {
                     color: #379683;
-                    font-size: 2.5rem; /* Larger heading */
+                    font-size: 60px; /* Larger heading */
                     margin-bottom: 50px; /* Add spacing below the heading */
                 }
         
@@ -143,33 +195,6 @@ main{
                     justify-content: flex-start;
                     align-items: flex-start;
                     gap: 20px; /*Space between each contact info section*/
-        
-                    .icons {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 20px; /* Space between icons */
-        
-                        img {
-                            width: 40px;
-                            height: 40px;
-                        }
-                    }
-        
-                    .items {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 10px;
-        
-                        h2 {
-                            font-size: 1.2rem;
-                            margin: 0;
-                        }
-        
-                        p {
-                            font-size: 1rem;
-                            margin: 5px 0 20px 0;
-                        }
-                    }
                 }
             }
         }   
@@ -178,7 +203,8 @@ main{
 .tiles-content {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
+    justify-content: center;
+    row-gap: 120px;
 }
 
 .tiles-row {
@@ -186,4 +212,22 @@ main{
     column-gap: 80px;
     flex-direction: row;
     align-items: center;
+}
+
+.tiles-left{
+    img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.tiles-right{
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
 }

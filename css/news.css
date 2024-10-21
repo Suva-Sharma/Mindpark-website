@@ -165,13 +165,13 @@ h1{
 
 .event-card-content h2{
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .event-card-content p{
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .event-card-content a{
