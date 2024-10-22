@@ -84,6 +84,7 @@ body {
 .container {
     /* border: 2px solid red; */
     /* padding: 0 0; */
+    position: relative;
     padding-bottom: -100px;
     display: flex;
     align-items: center;
@@ -105,7 +106,7 @@ body {
 }
 
 .testimonial:hover{
-    transform: translateY(-20px);
+    transform: translateY(-15px);
 }
 
 .avatar {
@@ -163,4 +164,24 @@ body {
 .stars {
     color: #FFBF00;
     font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack testimonials vertically on smaller screens */
+        align-items: center;
+    }
+    
+    .testimonial-header h1 {
+        font-size: 35px; /* Even smaller font size */
+    }
+
+    .testimonial-header p {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .testimonial {
+        width: 80%; /* Make testimonials wider on small screens */
+        margin: 10px 0;
+    }
 }
