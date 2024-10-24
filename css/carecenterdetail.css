@@ -11,6 +11,11 @@ nav{
     background-color: #379683;
     padding: 20px;
     font-size: 18px;
+    position: fixed;
+    top: 0;          
+    left: 0;       
+    right: 0; 
+    z-index: 1000;
 
     .logo{
         display: flex;
@@ -57,6 +62,7 @@ body{
     background-color: #A8E6CF;
     width: 100%;
     height: 100vh;
+    margin-top: 130px;
 }
 
 .container{
@@ -92,4 +98,43 @@ body{
     /* font-size: 20px; */
     margin-top: 50px;
     color: #696969;
+}
+
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container h1{
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .container p{
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .description{
+        width: 80%;
+    }
+
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner img{
+        width: 80%;
+    }
 }

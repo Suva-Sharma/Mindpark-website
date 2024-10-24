@@ -11,6 +11,11 @@
         background-color: #379683;
         padding: 20px;
         font-size: 18px;
+        position: fixed;
+        top: 0;          
+        left: 0;       
+        right: 0; 
+        z-index: 1000;
 
         .logo{
             display: flex;
@@ -53,8 +58,16 @@
         }
     }
 
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+    }
+
 main{
     background-color: #A8E6CF;
+    margin-top: 100px;
 
     .hero{
         display: flex;
@@ -84,7 +97,7 @@ main{
                     h2{
                         font-weight: 500;
                         font-size: 40px;
-                        color: #F59182;
+                        color: #f3b7ad;
                         margin-bottom: 20px;
                     }
 
@@ -119,3 +132,4 @@ main{
         padding-bottom: 50px;
     }
 }
+
