@@ -31,6 +31,10 @@
             }
         }
 
+        .hamburger{
+            display: none;
+        }
+
         .nav-items{
             display: flex;
             justify-content: space-between;
@@ -56,13 +60,6 @@
                 color: #F59182;
             }
         }
-    }
-
-    .hamburger {
-        display: none;
-        cursor: pointer;
-        color: white;
-        font-size: 24px;
     }
 
 main{
@@ -133,3 +130,19 @@ main{
     }
 }
 
+@media (max-width: 768px){
+    nav{
+
+        .hamburger{
+            display: flex;
+            flex-direction: column;
+            padding-top: 25px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .nav-items{
+            display: none;
+        }
+    }
+}
