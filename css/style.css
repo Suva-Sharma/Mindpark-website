@@ -20,9 +20,19 @@
         .logo{
             display: flex;
             justify-content: space-between;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             border-radius: 50%;
             margin-left: 20px;
+
+            .logo-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    margin-left: 10px;
+                    color: white;
+                }
+            }
 
             img{
                 width: 90px;
@@ -81,7 +91,7 @@ main{
                     flex-direction: column;
                     justify-content: center;
                     width: 100%;
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 
                     .heading{
                         font-size: 60px;
@@ -130,7 +140,7 @@ main{
     }
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     nav{
 
         .hamburger{
@@ -143,6 +153,71 @@ main{
 
         .nav-items{
             display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px; 
+            left: 0;
+            background-color: #379683;
+            width: 100%;
+            padding: 20px 0;
+
+            .nav-item {
+                margin: 10px 0; 
+            }
         }
+
+        .nav-items.active{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nav-item.active{
+                display: flex;
+
+            }
+        }
+    }
+
+
+    main{
+        .hero{
+            .section{
+                width: 100%;
+                &.left{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    flex-direction: column;
+    
+                    .content{
+                        width: 100%;
+    
+                        .heading{
+                            width: 400px;
+                            font-size: 40px;
+                            
+                        }
+
+                        h2{
+                            width: 384px;
+                            font-size: 28px;
+                        }
+
+                        .mission-statement{
+                            font-size: 16px;
+                            width: 384px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 400px){
+    nav{
+
     }
 }

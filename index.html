@@ -11,10 +11,13 @@
 <body>
     <nav>
         <div class="logo">
-            <a href="/index.html"><img src="/images/mindparklogo.png" alt="logo"></a>
+            <div class="logo-content">
+                <a href="/index.html"><img src="/images/mindparklogo.png" alt="logo"></a>
+                <p>MindPark</p>
+            </div>
         </div>
 
-        <div class="hamburger">
+        <div class="hamburger" onclick="toggleNav()">
             <img src="/images/menu.svg" alt="">
         </div>
 
@@ -47,5 +50,12 @@
         </span>
         
     </main>
+
+    <script>
+        function toggleNav() {
+            const navItems = document.querySelector('.nav-items');
+            navItems.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

@@ -20,9 +20,19 @@ nav{
     .logo{
         display: flex;
         justify-content: space-between;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 50%;
         margin-left: 20px;
+
+        .logo-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                margin-left: 10px;
+                color: white;
+            }
+        }
 
         img{
             width: 90px;
