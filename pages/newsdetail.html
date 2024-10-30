@@ -16,17 +16,29 @@
             </div>
         </div>
 
+        <ul class="sidebar">
+            <li class="cross-button" onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/news.html">News</a></li>
+            <li><a href="/pages/features.html">Features</a></li>
+            <li><a href="/pages/resources.html">Resources</a></li>
+            <li><a href="/pages/testimonials.html">Testimonials</a></li>
+            <li><a href="/pages/contact_us.html">Contact Us</a></li>
+        </ul>
+
         <ul class="nav-items">
-            <li class="nav-item"><a href="/index.html">Home</a></li>
-            <li class="nav-item"><a href="/pages/news.html" class="active">News</a></li>
+            <li class="nav-item"><a href="/index.html" class="active">Home</a></li>
+            <li class="nav-item"><a href="/pages/news.html">News</a></li>
             <li class="nav-item"><a href="/pages/features.html">Features</a></li>
             <li class="nav-item"><a href="/pages/resources.html">Resources</a></li>
             <li class="nav-item"><a href="/pages/testimonials.html">Testimonials</a></li>
             <li class="nav-item"><a href="/pages/contact_us.html">Contact Us</a></li>
         </ul>
-    </nav> 
 
-    
+        <div class="menu-button">
+            <a href="#" onclick="showSideBar()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+        </div>
+    </nav>
 
     <div class="container">
         <div class="content">
@@ -43,5 +55,7 @@
             </div>
         </div>
     </div>
+
+    <script src="/js/script.js"></script>   
 </body>
 </html>
