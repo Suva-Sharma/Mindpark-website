@@ -115,6 +115,16 @@ nav .nav-items .nav-item a:hover {
     color: #F59182;
 }
 
+nav .sidebar li a.active {
+    color: #F59182;
+    font-weight: bold;
+}
+
+nav .sidebar a:active,
+nav .sidebar a:hover {
+    color: #F59182;
+}
+
 body{
     background-color: #A8E6CF;
     width: 100%;

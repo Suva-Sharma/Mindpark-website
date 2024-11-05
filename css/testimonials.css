@@ -115,17 +115,22 @@ nav .nav-items .nav-item a:hover {
     color: #F59182;
 }
 
+nav .sidebar li a.active {
+    color: #F59182;
+    font-weight: bold;
+}
+
+nav .sidebar a:active,
+nav .sidebar a:hover {
+    color: #F59182;
+}
+
 body {
     width: 100%;
     height: 100vh;
     background-color: #A8E6CF;
     margin-top: 80px;
 }
-
-/* .testimonial-body{
-    width: 100%;
-    height: 75vh;
-} */
 
 .testimonial-header {
     text-align: center;
@@ -145,8 +150,6 @@ body {
 }
 
 .container {
-    /* border: 2px solid red; */
-    /* padding: 0 0; */
     position: relative;
     padding-bottom: -100px;
     display: flex;
@@ -229,7 +232,7 @@ body {
     font-size: 20px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     nav .nav-items {
         display: none;
@@ -283,7 +286,7 @@ body {
         width: 80%; /* Make testimonials wider on small screens */
         margin: 15px 0;
         position: relative;
-        top: 50%;
+        top: 50%; 
     }
 
     .testimonial:hover{

@@ -178,6 +178,16 @@ nav .nav-items .nav-item a:hover {
     color: #F59182;
 }
 
+nav .sidebar li a.active {
+    color: #F59182;
+    font-weight: bold;
+}
+
+nav .sidebar a:active,
+nav .sidebar a:hover {
+    color: #F59182;
+}
+
 body{
     background-color: #A8E6CF;
     width: 100%;
@@ -193,7 +203,7 @@ body{
     padding-bottom: 100px;
 }
 
-h1{
+.container h1{
     font-size: 50px;
     color: #F59182;
     margin-bottom: 40px;
@@ -228,7 +238,6 @@ h1{
 .card-content{
     padding: 20px;
     text-align: left;
-    /* padding-bottom: 0px; */
 }
 
 .card-content h2{
@@ -251,12 +260,24 @@ h1{
     font-size: 0.9rem;
     padding: 10px;
     border-radius: 5px;
-    /* background-color: #F6D28C; */
 }
 
 .card-content a:hover{
     background-color: #333;
     color: #fff;
+}
+
+.event-container{
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding-bottom: 100px;
+}
+
+.event-container h1{
+    font-size: 50px;
+    color: #F59182;
+    margin-bottom: 40px;
 }
 
 .event-cards{
@@ -311,7 +332,6 @@ h1{
     font-size: 0.9rem;
     padding: 10px;
     border-radius: 5px;
-    /* background-color: #F6D28C; */
 }
 
 .card-content a:hover{

@@ -110,8 +110,18 @@ nav .nav-items .nav-item a.active {
     font-weight: bold;
 }
 
+nav .sidebar li a.active {
+    color: #F59182;
+    font-weight: bold;
+}
+
 nav .nav-items .nav-item a:active,
 nav .nav-items .nav-item a:hover {
+    color: #F59182;
+}
+
+nav .sidebar a:active,
+nav .sidebar a:hover {
     color: #F59182;
 }
 
@@ -183,6 +193,11 @@ main .google-play {
 }
 
 @media screen and (max-width: 768px) {
+
+    html,body{
+        overflow-x: hidden;
+    }
+
     nav .nav-items {
         display: none;
         flex-direction: column;
@@ -226,6 +241,7 @@ main .google-play {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin: 100px 3em;
     }
 
     main .hero .section.left .content {
@@ -233,7 +249,7 @@ main .google-play {
     }
 
     main .hero .section.left .content .heading {
-        width: 400px;
+        width: 650px;
         font-size: 40px;
     }
 
@@ -244,20 +260,28 @@ main .google-play {
 
     main .hero .section.left .content .mission-statement {
         font-size: 16px;
-        width: 384px;
+        width: 650px;
     }
 
-    main .google-play img #google-play{
+    /* main .google-play img #google-play{
         width: 50%;
+    }
+
+    main .hero .section.section.right img{
+        display: none;
+    } */
+
+    main .hero .section.right{
+        display: none;
     }
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 400px) {
 
     main .hero .section.left .content{
-        width: 90%;
+        width: 100%;
         flex-direction: column;
-        justify-content: center
+        justify-content: center;
     }
 
     main .hero .section.left .content .heading{
@@ -278,5 +302,59 @@ main .google-play {
 
     main .google-play #google-play{
         width: 200px;
+    }
+} */
+
+@media screen and (max-width: 400px){
+
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    nav .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav .logo p {
+        font-size: 14px;
+    }
+
+    nav .nav-items {
+        display: none;
+    }
+
+    nav .menu-button {
+        display: flex;
+        align-items: center;
+    }
+
+    main .hero .section.left{
+        width: 100%;
+    }
+
+    main .hero .section.left .content .heading {
+        font-size: 30px;
+        width: 280px;
+    }
+
+    main .hero .section.left .content h2 {
+        font-size: 22px;
+        width: 280px;
+    }
+
+    main .hero .section.left .content .mission-statement {
+        font-size: 14px;
+        width: 280px;
+    }
+
+    main .hero .section.right img {
+        width: 100%;
+        height: auto;
+    }
+
+    main .google-play img {
+        width: 40%;
     }
 }

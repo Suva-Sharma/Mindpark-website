@@ -1,8 +1,15 @@
-*,*::before,*::after{
+/* *,*::before,*::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
+    font-family: 'Varela Round';
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Varela Round';
 }
 
@@ -116,6 +123,16 @@ nav .nav-items .nav-item a:hover {
     color: #F59182;
 }
 
+nav .sidebar li a.active {
+    color: #F59182;
+    font-weight: bold;
+}
+
+nav .sidebar a:active,
+nav .sidebar a:hover {
+    color: #F59182;
+}
+
 body {
     background-color: #A8E6CF;
     width: 100%;
@@ -133,7 +150,7 @@ h1 {
 }
 
 .row {
-    padding-top: 50px;
+    padding-top: 20px;
     width: 1000px;
     margin: auto;
     display: flex;
@@ -146,7 +163,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     background: none;
     border: none;
     border-radius: 0;
@@ -168,7 +185,7 @@ h1 {
     color: #4e746b;
     padding-top: 20px;
     line-height: 1.6;
-    max-width: 280px; 
+    max-width: 220px; 
     text-align: left;
 }
 
@@ -189,8 +206,16 @@ h1{
     padding-bottom: 50px;
 }
 
-.item{
+.container .item{
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container .item .item-description{
+    padding-top: 15px;
+    padding-left: 15px;
 }
 
 .item:hover{
@@ -266,7 +291,11 @@ h1{
     }
 
     .item{
-        width: 80%;
+        width: 50%;
+    }
+
+    .item p{
+        margin-left: 20px;
     }
 
     .item:hover{
