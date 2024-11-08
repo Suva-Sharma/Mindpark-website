@@ -234,6 +234,10 @@ body {
 
 @media screen and (max-width: 768px) {
 
+    body{
+        padding-bottom: 150%;
+    }
+
     nav .nav-items {
         display: none;
         flex-direction: column;
@@ -270,20 +274,20 @@ body {
 
     .container {
         display: flex;
-        flex-direction: column; /* Stack testimonials vertically on smaller screens */
+        flex-direction: column; 
         align-items: center;
     }
     
     .testimonial-header h1 {
-        font-size: 35px; /* Even smaller font size */
+        font-size: 35px; 
     }
 
     .testimonial-header p {
-        font-size: 16px; /* Smaller font size */
+        font-size: 16px; 
     }
 
     .testimonial {
-        width: 80%; /* Make testimonials wider on small screens */
+        width: 80%; 
         margin: 15px 0;
         position: relative;
         top: 50%; 
