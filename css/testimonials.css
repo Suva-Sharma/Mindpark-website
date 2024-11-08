@@ -294,3 +294,34 @@ body {
         translate: none;
     }
 }
+
+@media screen and (max-width: 400px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+        /* padding-bottom: 2000px; */
+        padding-bottom: 300%;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    nav .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav .logo p {
+        font-size: 14px;
+    }
+
+    nav .nav-items {
+        display: none;
+    }
+
+    nav .menu-button {
+        display: flex;
+        align-items: center;
+    }
+}

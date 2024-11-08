@@ -331,12 +331,12 @@ main .google-play {
     }
 
     main .hero .section.left{
-        width: 100%;
+        width: 350px;
     }
 
     main .hero .section.left .content .heading {
-        font-size: 30px;
-        width: 280px;
+        font-size: 35px;
+        width: 340px;
     }
 
     main .hero .section.left .content h2 {
@@ -346,7 +346,7 @@ main .google-play {
 
     main .hero .section.left .content .mission-statement {
         font-size: 14px;
-        width: 280px;
+        width: 300px;
     }
 
     main .hero .section.right img {
@@ -355,6 +355,6 @@ main .google-play {
     }
 
     main .google-play img {
-        width: 40%;
+        width: 80%;
     }
 }

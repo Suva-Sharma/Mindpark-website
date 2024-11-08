@@ -241,12 +241,12 @@ h3{
 .cc-card-content{
     padding: 20px;
     text-align: left;
-    /* padding-bottom: 0px; */
 }
 
 .cc-card-content h2{
     font-size: 1.2rem;
     margin-bottom: 10px;
+    height: 2.4rem;
 }
 
 .cc-card-content p{
@@ -264,7 +264,6 @@ h3{
     font-size: 0.9rem;
     padding: 10px;
     border-radius: 5px;
-    /* background-color: #F6D28C; */
 }
 
 .cc-card-content a:hover{
@@ -272,7 +271,7 @@ h3{
     color: #fff;
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
     nav .nav-items {
         display: none;
@@ -318,6 +317,10 @@ h3{
         width: 100%;
     }
 
+    .resources-heading{
+        font-size: 35px;
+    }
+
     .box:hover{
         transition: none;
         transform: none;
@@ -335,5 +338,66 @@ h3{
     .cc-card:hover{
         transition: none;
         transform: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    nav .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav .logo p {
+        font-size: 14px;
+    }
+
+    nav .nav-items {
+        display: none;
+    }
+
+    nav .menu-button {
+        display: flex;
+        align-items: center;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    .row{
+        width: 80%;
+        gap: 20px;
+    }
+
+    .box{
+        width: 100%;
+    }
+
+    .row .box img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .row .box p{
+        width: 180px;
+        font-size: 14px;
+    }
+
+    .cc-container h1{
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .cc-container{
+        width: 100%;
+    }
+
+    .cc-container .cc-cards{
+        gap: 30px;
     }
 }

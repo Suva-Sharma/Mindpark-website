@@ -167,7 +167,7 @@ body{
     color: #696969;
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
     nav .nav-items {
         display: none;
@@ -237,5 +237,30 @@ body{
 
     .banner img{
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    nav .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav .logo p {
+        font-size: 14px;
+    }
+
+    nav .nav-items {
+        display: none;
+    }
+
+    nav .menu-button {
+        display: flex;
+        align-items: center;
     }
 }
