@@ -183,7 +183,7 @@ h3{
 }
 
 .box p{
-    width: 210px;
+    width: 220px;
     color: #4e746b;
     padding-top: 20px;
     line-height: 1.6;
@@ -384,8 +384,8 @@ h3{
     }
 
     .row .box p{
-        width: 180px;
-        font-size: 14px;
+        width: 60%;
+        font-size: 16px;
     }
 
     .cc-container h1{

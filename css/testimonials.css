@@ -235,7 +235,7 @@ body {
 @media screen and (max-width: 768px) {
 
     body{
-        padding-bottom: 150%;
+        margin-bottom: 700px;
     }
 
     nav .nav-items {
@@ -297,14 +297,17 @@ body {
         transform: none;
         translate: none;
     }
+
+    #testimonial-no-1{
+        margin-top: 300px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     body{
         width: 100%;
         overflow-x: hidden;
-        /* padding-bottom: 2000px; */
-        padding-bottom: 300%;
+        margin-bottom: 700px;
     }
 
     .container{
@@ -327,5 +330,9 @@ body {
     nav .menu-button {
         display: flex;
         align-items: center;
+    }
+
+    #testimonial-no-1{
+        margin-top: 400px;
     }
 }
