@@ -35,3 +35,20 @@ window.addEventListener('resize', () => {
         handleHideSideBar();
     }
 });
+
+//Contact Us section
+
+let data = {
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    message: '',
+};
+
+const handleInput = (event) => {
+    data = {
+        ...data,
+        [event.target.name]: event.target.value,
+    };
+}
+

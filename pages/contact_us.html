@@ -33,7 +33,7 @@
             <!-- <li class="nav-item"><a href="/pages/resources.html">Resources</a></li> -->
             <li class="nav-item"><a href="/pages/testimonials.html">Testimonials</a></li>
             <li class="nav-item"><a href="/pages/contact_us.html" class="active">Contact Us</a></li>
-            <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank">Get the app</a></li>
+            <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank"><img class="gp-button" src="/images/Google_Play-Icon-Logo.wine.svg" alt=""></a></li>
         </ul>
 
         <div class="menu-button">
@@ -43,31 +43,32 @@
 
     <main>
 
-        <div class="form">
-            <h1>Let's Talk</h1>
+        <form action="https://api.web3forms.com/submit" method="POST" class="form">
+            <h1>Get in touch with us</h1>
             <div class="contact-form">
+                <input type="hidden" name="access_key" value="68d468b1-7cce-453f-8e28-e3e688f0ad69">
                 <div class="full-name">
-                    <label for="full-name">Full name</label>
-                    <input type="text" name="full-name" placeholder="Enter full name">
+                    <label for="fullName">Full name</label>
+                    <input type="text" name="fullName" placeholder="Enter full name" onchange="handleInput(event)">
                 </div>
                 <div class="email">
                     <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Enter email address">
+                    <input type="email" name="email" placeholder="Enter email address" onchange="handleInput(event)">
                 </div>
                 <div class="phone">
-                    <label for="phone-number">Phone number</label>
-                    <input type="number" name="phone-number" placeholder="Enter phone number">
+                    <label for="phoneNumber">Phone number</label>
+                    <input type="number" name="phoneNumber" placeholder="Enter phone number" onchange="handleInput(event)">
                 </div>
                 <div class="message-box">
                     <label for="message">Message</label>
-                    <textarea id="text-area" rows="10" cols="33" name="message" placeholder="Enter your message here" class="message"></textarea>
+                    <textarea id="text-area" rows="10" cols="33" name="message" placeholder="Enter your message here" class="message" onchange="handleInput(event)"></textarea>
                 </div>
 
                 <div class="submit-btn">
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 
     <script src="/js/script.js"></script>
