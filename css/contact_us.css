@@ -189,6 +189,7 @@ main {
     color: white;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
 }
 
 .form .contact-form .submit-btn button:hover {
