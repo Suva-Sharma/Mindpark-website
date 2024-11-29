@@ -743,6 +743,91 @@ main .app-store img{
     }
 }
 
+@media screen and (max-width: 376px) {
+    html,body{
+        overflow-x: hidden;
+    }
+
+    nav .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #379683;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    nav .nav-items.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .nav-items.active .nav-item {
+        display: none;
+    }
+
+    nav .nav-items.active .nav-item.active {
+        display: flex;
+    }
+
+    nav .nav-items.active .hideOnMobile {
+        display: none;
+    }
+
+    nav .menu-button {
+        display: flex;
+        align-items: center;
+    }
+
+    main .hero{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .hero .section.left{
+        width: 80%;
+        margin: 100px 50px 10px 40px;
+    }
+
+    main .hero .section.left .content .heading{ 
+        letter-spacing: -2.6px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    main .hero .section.left .content h2{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    main .hero .section.left .content .mission-statement{
+        font-size: 12px;
+        width: 100%;
+    }
+
+    main .hero .section.right{
+        width: 250px;
+        height: 220px;
+        border: 5px dashed #F59182;
+        border-radius: 15px;
+        margin-left: 60px;
+    }
+
+    main .hero .section.right .video-frame{
+        width: 230px;
+        height: 200px;
+    }
+
+    main .hero .section.right .video-frame video{
+        width: 200px;
+        height: 170px;
+    }
+
+}
+
 @media screen and (max-width: 320px) {
     html,body{
         overflow-x: hidden;
