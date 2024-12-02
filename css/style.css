@@ -136,7 +136,12 @@ nav .sidebar a:hover {
 }
 
 main {
-    background-color: #A8E6CF;
+    /* background-color: #A8E6CF; */
+    background-image: url('/images/website_background_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     margin-top: 100px;
 }
 
