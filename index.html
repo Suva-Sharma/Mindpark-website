@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keyword" content="App for Children with ADHD and/or Autism">
+    <meta name="description" content="App for Children with ADHD and/or Autism">
     <title>MindPark | An App for Children with ADHD and/or Autism</title>
+    <link rel="preload" href="/images/mindparklogo.webp" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link rel="preload" href='https://fonts.googleapis.com/css?family=Varela+Round&display=swap' as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/images/website_background_2.webp" as="image" type="image/webp" crossorigin="anonymous">
+
 </head>
 <body>
     <nav>
         <div class="logo">
             <div class="logo-content">
-                <a href="/index.html"><img src="/images/mindparklogo.png" alt="Logo for MindPark, an app developed to help children with ADHD and/or Autism Spectrum Disorder"></a>
+                <a href="/index.html"><img src="/images/mindparklogo.webp" alt="Logo for MindPark, an app developed to help children with ADHD and/or Autism Spectrum Disorder" loading="lazy"></a>
                 <p><a href="/index.html">MindPark</a></p>
             </div>
         </div>
@@ -20,24 +26,18 @@
         <ul class="sidebar">
             <li class="cross-button" onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></li>
             <li><a href="/index.html" class="active">Home</a></li>
-            <!--<li><a href="/pages/news.html">News</a></li>-->
-            <!-- <li><a href="/pages/resources.html">Resources</a></li> -->
-            <!-- <li><a href="/pages/testimonials.html">Testimonials</a></li> -->
             <li><a href="/pages/contact_us.html">Contact Us</a></li>
             <li><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank">Get the app now</a></li>
         </ul>
 
         <ul class="nav-items">
             <li class="nav-item"><a href="/index.html" class="active">Home</a></li>
-            <!-- <li class="nav-item"><a href="/pages/news.html">News</a></li> -->
-            <!-- <li class="nav-item"><a href="/pages/resources.html">Resources</a></li> -->
-            <!-- <li class="nav-item"><a href="/pages/testimonials.html">Testimonials</a></li> -->
             <li class="nav-item"><a href="/pages/contact_us.html">Contact Us</a></li>
             <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank"><img class="gp-button" src="/images/Google_Play-Icon-Logo.wine.svg" alt="Download the MindPark app now. This app was developed to help children with ADHD and/or Autism learn and grow."></a></li>
         </ul>
 
         <div class="menu-button">
-            <a href="#" onclick="showSideBar()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+            <a href="#" onclick="showSideBar()" role="button" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
         </div>
     </nav>
 
@@ -52,8 +52,9 @@
             </div>
             <div class="section right">
                 <div class="video-frame">
-                    <video autoplay loop muted playsinline class="homepage-video">
-                        <source src="/images/kids_classroom.mp4" type="video/mp4">
+                    <video autoplay loop muted playsinline preload="auto" class="homepage-video">
+                        <source src="/images/kids_classroom.webm" type="video/mp4">
+                        <track kind="captions" srclang="en" label="English Captions">
                         Your browser does not support the video tag.
                         <meta name="keyword" content="MindPark app was developed for children with ADHD and/or Autism disorder.">
                     </video>
@@ -74,21 +75,21 @@
             <h1>Our App</h1>
             <div class="cards">
                 <div class="card">
-                    <img src="/images/behavioral_assessment_2.png.jpg" alt="Image showing behavioral assessment section for kids with ADHD and/or Autism">
+                    <img src="/images/behavioral_assessment_2.webp" alt="Image showing behavioral assessment section for kids with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
                         <h2>Behavioral Assessment</h2>
                         <p>This section contains a questionnaires that analyze whether the child has behavioral disorders such as ADHD or ASD.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/images/cognitive_training_2.png.jpg" alt="Image showing cognitive training section for kids with ADHD and/or Autism">
+                    <img src="/images/cognitive_training_2.webp" alt="Image showing cognitive training section for kids with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
                         <h2>Cognitive Training</h2>
                         <p>This section contains games that help the child in developing skills such as fine motor skills, executive skills, social skills, verbal skills and math skills.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/images/adhd.jpg" alt="Image showing result of behavioral assessment questionnaire for diagnosis of ADHD and/or Autism">
+                    <img src="/images/adhd.webp" alt="Image showing result of behavioral assessment questionnaire for diagnosis of ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
                         <h2>Behavioral Performance</h2>
                         <p>This is a result of ADHD questionnaire for Autism Spectrum Disorder analysis.</p>
@@ -101,28 +102,28 @@
             <h1>Some Games We Have</h1>
             <div class="games">
                 <div class="game">
-                    <img src="/images/color_clash.png" alt="Color clash">
+                    <img src="/images/color_clash.webp" alt="Color clash" loading="lazy">
                     <div class="game-content">
                         <h2>Color Clash</h2>
                         <p>In this game, we select the color of the word that appears on the screen.</p>
                     </div>
                 </div>
                 <div class="game">
-                    <img src="/images/voiceloon.png" alt="Voiceloon">
+                    <img src="/images/voiceloon.webp" alt="Voiceloon" loading="lazy">
                     <div class="game-content">
                         <h2>Voiceloon</h2>
                         <p>In this game, we blow on the phone to make the balloon go high.</p>
                     </div>
                 </div>
                 <div class="game">
-                    <img src="/images/number_counting.png" alt="Number counting">
+                    <img src="/images/number_counting.webp" alt="Number counting" loading="lazy">
                     <div class="game-content">
                         <h2>Number Counting</h2>
                         <p>In this game, we count the number of items present on the screen and select the right number option.</p>
                     </div>
                 </div>
                 <div class="game">
-                    <img src="/images/simon_says.png" alt="Simon says">
+                    <img src="/images/simon_says.webp" alt="Simon says" loading="lazy">
                     <div class="game-content">
                         <h2>Simon Says</h2>
                         <p>In this game, player is supposed to do a task only if Simon says to do it.</p>
@@ -136,21 +137,21 @@
             <h1>Benefits</h1>
             <div class="cards">
                 <div class="card">
-                    <img src="/images/enhance_cognitive_skills.jpg" alt="This app helps enhance the cognitive skills of children with ADHD and/or Autism">
+                    <img src="/images/enhance_cognitive_skills.webp" alt="This app helps enhance the cognitive skills of children with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
                         <h2>Enhances Cognitive Skills</h2>
                         <p>Stimulates critical thinking and problem-solving, developing strong analytical abilities through puzzles and symbol identification.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/images/attention_span.jpg" alt="This app helps improve focus and attention span of children with ADHD and/or Autism">
+                    <img src="/images/attention_span.webp" alt="This app helps improve focus and attention span of children with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
                         <h2>Improves Focus and Attention</h2>
                         <p>Boosts attention span by engaging children in fast-paced, interactive games.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/images/fine_motor.jpg" alt="This app helps boost fine motor skills of children with ADHD and/or Autism">
+                    <img src="/images/fine_motor.webp" alt="This app helps boost fine motor skills of children with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
                         <h2>Boosts Fine Motor Skills</h2>
                         <p>Develops hand-eye coordination and dexterity through interactive tasks like tapping, dragging, and drawing.</p>
@@ -161,6 +162,6 @@
         
     </main>
 
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" defer></script>
 </body>
 </html>

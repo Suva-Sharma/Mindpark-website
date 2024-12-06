@@ -1,943 +1,961 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Varela Round';
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: #379683;
-    padding: 20px;
-    font-size: 18px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-nav .logo {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 50%;
-    margin-left: 20px;
-}
-
-nav .logo .logo-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav .logo .logo-content a{
-    text-decoration: none;
-    color: white;
-}
-
-nav .logo .logo-content p {
-    margin-left: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-nav .logo img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-}
-
-nav .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(168,230,207,0.5);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-nav .sidebar li {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 10px 0px;
-    text-align: left;
-}
-
-nav .sidebar a {
-    width: 100%;
-    text-decoration: none;
-    color: #333333;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav .sidebar a:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-nav .menu-button{
-    display: none;
-}
-
-nav .nav-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    color: white;
-    gap: 60px;
-    margin-right: 20px;
-}
-
-nav .nav-items .nav-item .gp-button{
-    width: 80px;
-    height: 80px;
-}
-
-nav .nav-items .nav-item a {
-    text-decoration: none;
-    color: white;
-}
-
-nav .nav-items .nav-item a.active {
-    color: #F59182;
-    font-weight: bold;
-}
-
-nav .sidebar li a.active {
-    color: #F59182;
-    font-weight: bold;
-}
-
-nav .nav-items .nav-item a:active,
-nav .nav-items .nav-item a:hover {
-    color: #F59182;
-}
-
-nav .sidebar a:active,
-nav .sidebar a:hover {
-    color: #F59182;
-}
-
-main {
-    /* background-color: #A8E6CF; */
-    background-image: url('/images/website_background_2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    margin-top: 100px;
-}
-
-main .hero {
-    display: flex;
-}
-
-main .hero .section {
-    width: 50%;
-}
-
-main .hero .section.left {
-    display: flex;
-    margin: 100px 10px 50px 50px;
-}
-
-main .hero .section.left .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}
-
-main .hero .section.left .content .heading {
-    font-size: 60px;
-    font-weight: bold;
-    color: #F59182;
-    letter-spacing: -3px;
-    margin-bottom: 40px;
-}
-
-main .hero .section.left .content h2 {
-    font-weight: 300 ;
-    font-size: 40px;
-    color: #e89080;
-    margin-bottom: 10px;
-}
-
-main .hero .section.left .content .mission-statement {
-    width: 90%;
-    font-size: 19px;
-    font-weight: 400;    
-}
-
-main .hero .section.right {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 50px 50px 10px;
-    width: 50%;
-    height: 450px;
-    margin-top: 14vh;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: #F59182;
-}
-
-main .hero .section.right .video-frame{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border: 5px dashed #F59182;
-    border-radius: 15px;
-    background-color: #fff;
-}
-
-main .hero .section.right video {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-main .stores{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-main .google-play {
-    width: 250px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
-}
-
-main .app-store{
-    width: 250px;
-    height: 100px;
-    display: inline-block;
-    justify-content: center;
-}
-
-main .google-play img{
-    width: 250px;
-    height: 100px;
-}
-
-main .app-store img{
-    width: 250px;
-    height: 100px;
-}
-
-.container{
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding-bottom: 100px;
-}
-
-.container h1{
-    font-size: 50px;
-    color: #F59182;
-    margin-bottom: 40px;
-    padding-top: 110px;
-}
-
-.cards{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.card{
-    background-color: #F6D28C;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 500px;
-    transition: transform 0.2s;
-}
-
-.card:hover{
-    transform: translateY(-15px);
-}
-
-.card img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-content{
-    padding: 20px;
-    text-align: left;
-}
-
-.card-content h2{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.card-content p{
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.card-content a{
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.card-content a:hover{
-    background-color: #333;
-    color: #fff;
-}
-
-.games-we-have{
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.games-we-have h1{
-    font-size: 50px;
-    color: #F59182;
-    padding: 30px;
-}
-
-.games{
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.game{
-    background-color: #F6D28C;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 250px;
-    transition: transform 0.2s;
-}
-
-.game:hover{
-    transform: translateY(-15px);
-}
-
-.game img{
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-}
-
-.game-content{
-    padding: 20px;
-    text-align: left;
-}
-
-.game-content h2{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.game-content p{
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.game-content a{
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.game-content a:hover{
-    background-color: #333;
-    color: #fff;
-}
-
-.games-we-have .many-more{
-    font-size: 36px;
-}
-
-.benefits-container{
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding-bottom: 100px;
-}
-
-.benefits-container h1{
-    font-size: 50px;
-    color: #F59182;
-    margin-bottom: 40px;
-}
-
-.benefits-container .cards{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.benefits-container .cards .card{
-    background-color: #F6D28C;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 500px;
-    transition: transform 0.2s;
-}
-
-.benefits-container .cards .card:hover{
-    transform: translateY(-15px);
-}
-
-.benefits-container .cards .card img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.benefits-container .cards .card .card-content{
-    padding: 20px;
-    text-align: left;
-}
-
-.benefits-container .cards .card .card-content h2{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.benefits-container .cards .card .card-content p{
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.benefits-container .cards .card .card-content a{
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.benefits-container .cards .card .card-content a:hover{
-    background-color: #333;
-    color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-    html,body{
-        overflow-x: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Varela Round', sans-serif;
+        font-display: swap;
     }
 
-    nav .nav-items {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
+    @font-face {
+        font-family: 'Varela Round';
+        src: url('https://fonts.googleapis.com/css?family=Varela+Round') format('woff2');
+        font-display: swap;
+    }
+
+    body{
+        font-family: 'Varela Round',;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: #308273;
+        padding: 20px;
+        font-size: 18px;
+        position: fixed;
+        top: 0;
         left: 0;
-        background-color: #379683;
-        width: 100%;
-        padding: 20px 0;
+        right: 0;
+        z-index: 1000;
     }
 
-    nav .nav-items.active {
+    nav .logo {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+
+    nav .logo .logo-content {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    nav .nav-items.active .nav-item {
+    nav .logo .logo-content a{
+        text-decoration: none;
+        color: white;
+    }
+
+    nav .logo .logo-content p {
+        margin-left: 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav .logo img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+
+    nav .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(168,230,207,0.5);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
         display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
-    nav .nav-items.active .nav-item.active {
-        display: flex;
-    }
-
-    nav .nav-items.active .hideOnMobile {
-        display: none;
-    }
-
-    nav .menu-button {
-        display: flex;
-        align-items: center;
-    }
-
-    main .hero{
+    nav .sidebar li {
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 10px 0px;
+        text-align: left;
     }
 
-    main .hero .section.left{
-        width: 80%;
-        margin: 100px 50px 10px 80px;
+    nav .sidebar a {
+        width: 100%;
+        text-decoration: none;
+        color: #333333;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
     }
 
-    main .hero .section.left .content .heading{ 
-        letter-spacing: -2.6px;
-        font-size: 42px;
-        margin-bottom: 30px;
+    nav .sidebar a:hover{
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
-    main .hero .section.left .content h2{
-        font-size: 28px;
+    nav .menu-button{
+        display: none;
     }
 
-    main .hero .section.left .content .mission-statement{
-        font-size: 16px;
+    nav .nav-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        color: white;
+        gap: 60px;
+        margin-right: 20px;
+    }
+
+    nav .nav-items .nav-item .gp-button{
+        width: 80px;
+        height: 80px;
+    }
+
+    nav .nav-items .nav-item a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav .nav-items .nav-item a.active {
+        color: #F59182;
+        font-weight: bold;
+    }
+
+    nav .sidebar li a.active {
+        color: #F59182;
+        font-weight: bold;
+    }
+
+    nav .nav-items .nav-item a:active,
+    nav .nav-items .nav-item a:hover {
+        color: #F59182;
+    }
+
+    nav .sidebar a:active,
+    nav .sidebar a:hover {
+        color: #F59182;
+    }
+
+    main {
+        /* background-color: #A8E6CF; */
+        background-image: url('/images/website_background_2.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        margin-top: 100px;
+    }
+
+    main .hero {
+        display: flex;
+    }
+
+    main .hero .section {
+        width: 50%;
+    }
+
+    main .hero .section.left {
+        display: flex;
+        margin: 100px 10px 50px 50px;
+    }
+
+    main .hero .section.left .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
     }
 
-    main .hero .section.right{
-        width: 80%;
-        margin-left: 80px;
+    main .hero .section.left .content .heading {
+        font-size: 60px;
+        font-weight: bold;
+        color: #F59182;
+        letter-spacing: -3px;
+        margin-bottom: 40px;
+    }
+
+    main .hero .section.left .content h2 {
+        font-weight: 300 ;
+        font-size: 40px;
+        color: #e89080;
+        margin-bottom: 10px;
+    }
+
+    main .hero .section.left .content .mission-statement {
+        width: 90%;
+        font-size: 19px;
+        font-weight: 400;    
+    }
+
+    main .hero .section.right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 50px 50px 10px;
+        width: 50%;
+        height: 450px;
+        margin-top: 14vh;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: #F59182;
     }
 
     main .hero .section.right .video-frame{
-        width: 100%;
-    }
-
-    main .stores .google-play img{
-        width: 250px;
-    }
-
-    main .stores .app-store img{
-        width: 250px;
-    }
-
-    main .container{
-        width: 100%;
-    }
-
-    main .container h1{
-        font-size: 42px;
-    }
-
-    main .container .cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    main .container .cards .card{
-        width: 70%;
-    }
-
-    main .container .cards .card img{
-        height: 250px;
-    }
-
-    main .container .cards .card:hover{
-        transform: none;
-    }
-
-    main .games-we-have h1{
-        font-size: 42px;
-    }
-
-    main .games-we-have .games{
-        display: grid;
-        grid-template-columns: auto auto;
-        row-gap: 50px;
-    }
-
-    main .games-we-have .games .game:hover{
-        transform: none;
-    }
-
-    main .games-we-have .many-more{
-        font-size: 28px;
-    }
-
-    main .benefits-container{
-        width: 100%;
-    }
-
-    main .benefits-container h1{
-        font-size: 42px;
-    }
-
-    main .benefits-container .cards{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    main .benefits-container .cards .card{
-        width: 70%;
-    }
-
-    main .benefits-container .cards .card img{
-        height: 250px;
-    }
-
-    main .benefits-container .cards .card:hover{
-        transform: none;
-    }
-}
-
-@media screen and (max-width: 426px) {
-    html,body{
-        overflow-x: hidden;
-    }
-
-    nav .nav-items {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: #379683;
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    nav .nav-items.active {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    nav .nav-items.active .nav-item {
-        display: none;
-    }
-
-    nav .nav-items.active .nav-item.active {
-        display: flex;
-    }
-
-    nav .nav-items.active .hideOnMobile {
-        display: none;
-    }
-
-    nav .menu-button {
-        display: flex;
-        align-items: center;
-    }
-
-    main .hero{
-        display: flex;
-        flex-direction: column;
-    }
-
-    main .hero .section.left{
-        width: 80%;
-        margin: 100px 50px 10px 55px;
-    }
-
-    main .hero .section.left .content .heading{ 
-        letter-spacing: -2.6px;
-        font-size: 32px;
-        margin-bottom: 20px;
-    }
-
-    main .hero .section.left .content h2{
-        font-size: 24px;
-        margin-bottom: 5px;
-    }
-
-    main .hero .section.left .content .mission-statement{
-        font-size: 14px;
-        width: 100%;
-    }
-
-    main .hero .section.right{
-        width: 75%;
-        height: 250px;
+        padding: 10px;
         border: 5px dashed #F59182;
         border-radius: 15px;
-        margin-left: 55px;
+        background-color: #fff;
     }
 
-    main .hero .section.right .video-frame{
-        width: 300px;
-        height: 220px;
-    }
-
-    main .hero .section.right .video-frame video{
-        width: 270px;
-        height: 190px;
+    main .hero .section.right video {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+        border-radius: 10px;
+        transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     main .stores{
-        flex-direction: column;
+        display: flex;
         justify-content: center;
-        row-gap: 2px;
+        align-items: center;
+        gap: 50px;
     }
 
-    main .container h1{
-        padding-top: 40px;
-        margin-bottom: 25px;
-        font-size: 32px;
+    main .google-play {
+        width: 250px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
     }
 
-    main .stores .google-play img{
+    main .app-store{
+        width: 250px;
+        height: 100px;
+        display: inline-block;
+        justify-content: center;
+    }
+
+    main .google-play img{
+        width: 250px;
+        height: 100px;
+    }
+
+    main .app-store img{
+        width: 250px;
+        height: 100px;
+    }
+
+    .container{
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto; 
+        padding-bottom: 100px;
+    }
+
+    .container h1{
+        font-size: 50px;
+        color: #F59182;
+        margin-bottom: 40px;
+        padding-top: 110px;
+    }
+
+    .cards{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .card{
+        background-color: #F8E2B4;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
         width: 500px;
-        height: 60px;
+        transition: transform 0.2s;
     }
 
-    main .stores .app-store img{
-        width: 250px;
-        height: 60px;
+    .card h2{
+        color: #666;
     }
 
-    main .games-we-have h1{
-        padding-top: 5px;
-        padding-bottom: 25px;
-        font-size: 32px;
+    .card:hover{
+        transform: translateY(-15px);
     }
 
-    main .games-we-have .games{
-        display: grid;
-        grid-template-columns: auto;
-    }
-
-    main .games-we-have .many-more{
-        margin-top: 32px;
-        padding-bottom: 10px;
-        font-size: 20px;
-    }
-
-    main .benefits-container h1{
-        margin-bottom: 25px;
-        font-size: 32px;
-    }
-}
-
-@media screen and (max-width: 376px) {
-    html,body{
-        overflow-x: hidden;
-    }
-
-    nav .nav-items {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: #379683;
+    .card img{
         width: 100%;
-        padding: 20px 0;
+        height: 200px;
+        object-fit: cover;
     }
 
-    nav .nav-items.active {
+    .card-content{
+        padding: 20px;
+        text-align: left;
+    }
+
+    .card-content h2{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .card-content p{
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .card-content a{
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .card-content a:hover{
+        background-color: #333;
+        color: #fff;
+    }
+
+    .games-we-have{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .games-we-have h1{
+        font-size: 50px;
+        color: #F59182;
+        padding: 30px;
+    }
+
+    .games{
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .game{
+        background-color: #F8E2B4;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 250px;
+        transition: transform 0.2s;
+    }
+
+    .game:hover{
+        transform: translateY(-15px);
+    }
+
+    .game img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .game-content{
+        padding: 20px;
+        text-align: left;
+    }
+
+    .game-content h2{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    .game-content p{
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .game-content a{
+        text-decoration: none;
+        color: #666;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .game-content a:hover{
+        background-color: #333;
+        color: #fff;
+    }
+
+    .games-we-have .many-more{
+        font-size: 36px;
+    }
+
+    .benefits-container{
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto; 
+        padding-bottom: 100px;
+    }
+
+    .benefits-container h1{
+        font-size: 50px;
+        color: #F59182;
+        margin-bottom: 40px;
+    }
+
+    .benefits-container .cards{
         display: flex;
         justify-content: center;
-        align-items: center;
+        gap: 50px;
     }
 
-    nav .nav-items.active .nav-item {
-        display: none;
-    }
-
-    nav .nav-items.active .nav-item.active {
-        display: flex;
-    }
-
-    nav .nav-items.active .hideOnMobile {
-        display: none;
-    }
-
-    nav .menu-button {
-        display: flex;
-        align-items: center;
-    }
-
-    main .hero{
-        display: flex;
-        flex-direction: column;
-    }
-
-    main .hero .section.left{
-        width: 80%;
-        margin: 100px 50px 10px 40px;
-    }
-
-    main .hero .section.left .content .heading{ 
-        letter-spacing: -2.6px;
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-
-    main .hero .section.left .content h2{
-        font-size: 20px;
-        margin-bottom: 5px;
-    }
-
-    main .hero .section.left .content .mission-statement{
-        font-size: 12px;
-        width: 100%;
-    }
-
-    main .hero .section.right{
-        width: 250px;
-        height: 220px;
-        border: 5px dashed #F59182;
+    .benefits-container .cards .card{
+        background-color: #F8E2B4;
         border-radius: 15px;
-        margin-left: 60px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 500px;
+        transition: transform 0.2s;
     }
 
-    main .hero .section.right .video-frame{
-        width: 230px;
-        height: 200px;
+    .benefits-container .cards .card:hover{
+        transform: translateY(-15px);
     }
 
-    main .hero .section.right .video-frame video{
-        width: 200px;
-        height: 170px;
-    }
-
-}
-
-@media screen and (max-width: 320px) {
-    html,body{
-        overflow-x: hidden;
-    }
-
-    nav .nav-items {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: #379683;
+    .benefits-container .cards .card img{
         width: 100%;
-        padding: 20px 0;
-    }
-
-    nav .nav-items.active {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    nav .nav-items.active .nav-item {
-        display: none;
-    }
-
-    nav .nav-items.active .nav-item.active {
-        display: flex;
-    }
-
-    nav .nav-items.active .hideOnMobile {
-        display: none;
-    }
-
-    nav .menu-button {
-        display: flex;
-        align-items: center;
-    }
-
-    main .hero{
-        display: flex;
-        flex-direction: column;
-    }
-
-    main .hero .section.left{
-        width: 80%;
-        margin: 100px 50px 10px 40px;
-    }
-
-    main .hero .section.left .content .heading{ 
-        letter-spacing: -2.6px;
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-
-    main .hero .section.left .content h2{
-        font-size: 20px;
-        margin-bottom: 5px;
-    }
-
-    main .hero .section.left .content .mission-statement{
-        font-size: 12px;
-        width: 100%;
-    }
-
-    main .hero .section.right{
-        width: 70%;
-        height: 220px;
-        border: 5px dashed #F59182;
-        border-radius: 15px;
-        margin-left: 45px;
-    }
-
-    main .hero .section.right .video-frame{
-        width: 200px;
         height: 200px;
+        object-fit: cover;
     }
 
-    main .hero .section.right .video-frame video{
-        width: 170px;
-        height: 170px;
+    .benefits-container .cards .card .card-content{
+        padding: 20px;
+        text-align: left;
     }
 
-    main .container h1{
-        font-size: 30px;
+    .benefits-container .cards .card .card-content h2{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
 
-    main .games-we-have h1{
-        padding-top: 5px;
-        padding-bottom: 25px;
-        font-size: 30px;
+    .benefits-container .cards .card .card-content p{
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 10px;
     }
 
-    main .games-we-have .games{
-        display: grid;
-        grid-template-columns: auto;
+    .benefits-container .cards .card .card-content a{
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        padding: 10px;
+        border-radius: 5px;
     }
 
-    main .games-we-have .games .game{
-        width: 220px;
+    .benefits-container .cards .card .card-content a:hover{
+        background-color: #333;
+        color: #fff;
     }
 
-    main .games-we-have .many-more{
-        margin-top: 32px;
-        padding-bottom: 10px;
-        font-size: 20px;
+    @media screen and (max-width: 768px) {
+        html,body{
+            overflow-x: hidden;
+        }
+
+        nav .nav-items {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: #308273;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        nav .nav-items.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .nav-items.active .nav-item {
+            display: none;
+        }
+
+        nav .nav-items.active .nav-item.active {
+            display: flex;
+        }
+
+        nav .nav-items.active .hideOnMobile {
+            display: none;
+        }
+
+        nav .menu-button {
+            display: flex;
+            align-items: center;
+        }
+
+        main .hero{
+            display: flex;
+            flex-direction: column;
+        }
+
+        main .hero .section.left{
+            width: 80%;
+            margin: 100px 50px 10px 80px;
+        }
+
+        main .hero .section.left .content .heading{ 
+            letter-spacing: -2.6px;
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        main .hero .section.left .content h2{
+            font-size: 28px;
+        }
+
+        main .hero .section.left .content .mission-statement{
+            font-size: 16px;
+            width: 100%;
+        }
+
+        main .hero .section.right{
+            width: 80%;
+            margin-left: 80px;
+        }
+
+        main .hero .section.right .video-frame{
+            width: 100%;
+        }
+
+        main .stores .google-play img{
+            width: 250px;
+        }
+
+        main .stores .app-store img{
+            width: 250px;
+        }
+
+        main .container{
+            width: 100%;
+        }
+
+        main .container h1{
+            font-size: 42px;
+        }
+
+        main .container .cards{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        main .container .cards .card{
+            width: 70%;
+        }
+
+        main .container .cards .card img{
+            height: 250px;
+        }
+
+        main .container .cards .card:hover{
+            transform: none;
+        }
+
+        main .games-we-have h1{
+            font-size: 42px;
+        }
+
+        main .games-we-have .games{
+            display: grid;
+            grid-template-columns: auto auto;
+            row-gap: 50px;
+        }
+
+        main .games-we-have .games .game:hover{
+            transform: none;
+        }
+
+        main .games-we-have .many-more{
+            font-size: 28px;
+        }
+
+        main .benefits-container{
+            width: 100%;
+        }
+
+        main .benefits-container h1{
+            font-size: 42px;
+        }
+
+        main .benefits-container .cards{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        main .benefits-container .cards .card{
+            width: 70%;
+        }
+
+        main .benefits-container .cards .card img{
+            height: 250px;
+        }
+
+        main .benefits-container .cards .card:hover{
+            transform: none;
+        }
     }
-}
+
+    @media screen and (max-width: 426px) {
+        html,body{
+            overflow-x: hidden;
+        }
+
+        nav .nav-items {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: #308273;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        nav .nav-items.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .nav-items.active .nav-item {
+            display: none;
+        }
+
+        nav .nav-items.active .nav-item.active {
+            display: flex;
+        }
+
+        nav .nav-items.active .hideOnMobile {
+            display: none;
+        }
+
+        nav .menu-button {
+            display: flex;
+            align-items: center;
+        }
+
+        main .hero{
+            display: flex;
+            flex-direction: column;
+        }
+
+        main .hero .section.left{
+            width: 80%;
+            margin: 100px 50px 10px 55px;
+        }
+
+        main .hero .section.left .content .heading{ 
+            letter-spacing: -2.6px;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        main .hero .section.left .content h2{
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        main .hero .section.left .content .mission-statement{
+            font-size: 14px;
+            width: 100%;
+        }
+
+        main .hero .section.right{
+            width: 75%;
+            height: 250px;
+            border: 5px dashed #F59182;
+            border-radius: 15px;
+            margin-left: 55px;
+        }
+
+        main .hero .section.right .video-frame{
+            width: 300px;
+            height: 220px;
+        }
+
+        main .hero .section.right .video-frame video{
+            width: 270px;
+            height: 190px;
+        }
+
+        main .stores{
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 2px;
+        }
+
+        main .container h1{
+            padding-top: 40px;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+
+        main .stores .google-play img{
+            width: 500px;
+            height: 60px;
+        }
+
+        main .stores .app-store img{
+            width: 250px;
+            height: 60px;
+        }
+
+        main .games-we-have h1{
+            padding-top: 5px;
+            padding-bottom: 25px;
+            font-size: 32px;
+        }
+
+        main .games-we-have .games{
+            display: grid;
+            grid-template-columns: auto;
+        }
+
+        main .games-we-have .many-more{
+            margin-top: 32px;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+
+        main .benefits-container h1{
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+    }
+
+    @media screen and (max-width: 376px) {
+        html,body{
+            overflow-x: hidden;
+        }
+
+        nav .nav-items {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: #308273;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        nav .nav-items.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .nav-items.active .nav-item {
+            display: none;
+        }
+
+        nav .nav-items.active .nav-item.active {
+            display: flex;
+        }
+
+        nav .nav-items.active .hideOnMobile {
+            display: none;
+        }
+
+        nav .menu-button {
+            display: flex;
+            align-items: center;
+        }
+
+        main .hero{
+            display: flex;
+            flex-direction: column;
+        }
+
+        main .hero .section.left{
+            width: 80%;
+            margin: 100px 50px 10px 40px;
+        }
+
+        main .hero .section.left .content .heading{ 
+            letter-spacing: -2.6px;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        main .hero .section.left .content h2{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        main .hero .section.left .content .mission-statement{
+            font-size: 12px;
+            width: 100%;
+        }
+
+        main .hero .section.right{
+            width: 250px;
+            height: 220px;
+            border: 5px dashed #F59182;
+            border-radius: 15px;
+            margin-left: 60px;
+        }
+
+        main .hero .section.right .video-frame{
+            width: 230px;
+            height: 200px;
+        }
+
+        main .hero .section.right .video-frame video{
+            width: 200px;
+            height: 170px;
+        }
+
+    }
+
+    @media screen and (max-width: 320px) {
+        html,body{
+            overflow-x: hidden;
+        }
+
+        nav .nav-items {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: #308273;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        nav .nav-items.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav .nav-items.active .nav-item {
+            display: none;
+        }
+
+        nav .nav-items.active .nav-item.active {
+            display: flex;
+        }
+
+        nav .nav-items.active .hideOnMobile {
+            display: none;
+        }
+
+        nav .menu-button {
+            display: flex;
+            align-items: center;
+        }
+
+        main .hero{
+            display: flex;
+            flex-direction: column;
+        }
+
+        main .hero .section.left{
+            width: 80%;
+            margin: 100px 50px 10px 40px;
+        }
+
+        main .hero .section.left .content .heading{ 
+            letter-spacing: -2.6px;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        main .hero .section.left .content h2{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        main .hero .section.left .content .mission-statement{
+            font-size: 12px;
+            width: 100%;
+        }
+
+        main .hero .section.right{
+            width: 70%;
+            height: 220px;
+            border: 5px dashed #F59182;
+            border-radius: 15px;
+            margin-left: 45px;
+        }
+
+        main .hero .section.right .video-frame{
+            width: 200px;
+            height: 200px;
+        }
+
+        main .hero .section.right .video-frame video{
+            width: 170px;
+            height: 170px;
+        }
+
+        main .container h1{
+            font-size: 30px;
+        }
+
+        main .games-we-have h1{
+            padding-top: 5px;
+            padding-bottom: 25px;
+            font-size: 30px;
+        }
+
+        main .games-we-have .games{
+            display: grid;
+            grid-template-columns: auto;
+        }
+
+        main .games-we-have .games .game{
+            width: 220px;
+        }
+
+        main .games-we-have .many-more{
+            margin-top: 32px;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+    }
