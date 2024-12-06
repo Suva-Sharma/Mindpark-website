@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Varela Round';
+    src: url('https://fonts.googleapis.com/css?family=Varela+Round') format('woff2');
+    font-display: swap;
+}
+
+body{
+    font-family: 'Varela Round', sans-serif;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #379683;
+    background-color: #308273;
     padding: 20px;
     font-size: 18px;
     position: fixed;
@@ -116,13 +129,14 @@ nav .nav-items .nav-item a {
 }
 
 nav .nav-items .nav-item a.active {
-    color: #F59182;
+    color: white;
     font-weight: bold;
 }
 
 nav .nav-items .nav-item a:active,
 nav .nav-items .nav-item a:hover {
-    color: #F59182;
+    color: white;
+    font-weight: bold
 }
 
 nav .sidebar li a.active {
@@ -132,14 +146,14 @@ nav .sidebar li a.active {
 
 nav .sidebar a:active,
 nav .sidebar a:hover {
-    color: #F59182;
+    color: white;
 }
 
 body{
     width: 100%;
     height: 100vh;
     /* background-color: #A8E6CF; */
-    background-image: url('/images/website_background_2.jpg');
+    background-image: url('/images/website_background_2.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -203,8 +217,8 @@ main {
     width: 150px;
     height: 50px;
     font-size: 16px;
-    background-color: #F59182;
-    color: white;
+    background-color: #F69B8D;
+    color: #454545;
     border-radius: 50px;
     border: none;
     cursor: pointer;
@@ -212,7 +226,7 @@ main {
 
 .form .contact-form .submit-btn button:hover {
     background-color: #f47663;
-    color: white;
+    color: black;
     transition: .2s;
 }
 

@@ -15,7 +15,7 @@
     }
 
     body{
-        font-family: 'Varela Round',;
+        font-family: 'Varela Round', sans-serif;
     }
 
     nav {
@@ -129,27 +129,27 @@
     }
 
     nav .nav-items .nav-item a.active {
-        color: #F59182;
+        color: white;
         font-weight: bold;
     }
 
     nav .sidebar li a.active {
-        color: #F59182;
+        color: white;
         font-weight: bold;
     }
 
     nav .nav-items .nav-item a:active,
     nav .nav-items .nav-item a:hover {
-        color: #F59182;
+        font-weight: bold;
     }
 
     nav .sidebar a:active,
     nav .sidebar a:hover {
-        color: #F59182;
+        color: white;
+        font-weight: bold;
     }
 
     main {
-        /* background-color: #A8E6CF; */
         background-image: url('/images/website_background_2.webp');
         background-repeat: no-repeat;
         background-position: center;
@@ -165,7 +165,7 @@
     main .hero .section {
         width: 50%;
     }
-
+ 
     main .hero .section.left {
         display: flex;
         margin: 100px 10px 50px 50px;
