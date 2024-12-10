@@ -1,0 +1,24 @@
+:root{
+    --navbar-bg-color: #308273;
+    --body-bg-color: #A8E6CF;
+    --text-white: white;
+
+    /* Spacings */
+
+    --gap-xs: 4px;
+    --gap-sm: 8px;
+    --gap-md: 16px;
+    --gap-lg: 24px;
+    --gap-xl: 32px;
+    --gap-2xl: 40px;
+    --gap-3xl: 48px;
+
+    /* Fontsizes */
+
+    --font-xs: 4px;
+    --font-sm: 8px;
+    --font-base: 16px;
+    --font-md: 24px;
+    --font-lg: 32px;
+}
+

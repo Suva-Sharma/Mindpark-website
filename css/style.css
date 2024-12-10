@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('vars.css');
+@import url('layout.css');
+@import url('theme.css');
 
-    * {
+    * , *::before, *::after{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -19,29 +22,15 @@
     }
 
     nav {
-        display: flex;
-        justify-content: space-between;
-        background-color: #308273;
+        background-color: var(--navbar-bg-color);
         padding: 20px;
         font-size: 18px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
         z-index: 1000;
     }
 
     nav .logo {
-        display: flex;
-        justify-content: space-between;
         border-radius: 50%;
         margin-left: 20px;
-    }
-
-    nav .logo .logo-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     nav .logo .logo-content a{
@@ -62,19 +51,11 @@
     }
 
     nav .sidebar {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
         width: 250px;
         z-index: 999;
         background-color: rgba(168,230,207,0.5);
         backdrop-filter: blur(10px);
         box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
         padding: 20px;
         margin-top: auto;
         margin-bottom: auto;
@@ -82,10 +63,6 @@
 
     nav .sidebar li {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         list-style: none;
         margin: 10px 0px;
         text-align: left;
@@ -104,14 +81,7 @@
         background-color: rgba(255, 255, 255, 0.2);
     }
 
-    nav .menu-button{
-        display: none;
-    }
-
     nav .nav-items {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         list-style: none;
         color: white;
         gap: 60px;
@@ -158,16 +128,11 @@
         margin-top: 100px;
     }
 
-    main .hero {
-        display: flex;
-    }
-
     main .hero .section {
         width: 50%;
     }
  
     main .hero .section.left {
-        display: flex;
         margin: 100px 10px 50px 50px;
     }
 
@@ -179,32 +144,39 @@
     }
 
     main .hero .section.left .content .heading {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: bold;
         color: #F59182;
         letter-spacing: -3px;
-        margin-bottom: 40px;
+        /* margin-bottom: 10px; */
     }
 
     main .hero .section.left .content h2 {
-        font-weight: 300 ;
-        font-size: 40px;
-        color: #e89080;
+        font-weight: 300;
+        width: 85%;
+        font-size: 24px;
+        color: #cca49d;
         margin-bottom: 10px;
     }
 
-    main .hero .section.left .content .mission-statement {
-        width: 90%;
-        font-size: 19px;
-        font-weight: 400;    
+    main .hero .section.left .content ul.main-use-case{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    main .hero .section.left .content ul.main-use-case li::before{
+        content: "✓";
+        color: var(--navbar-bg-color);
+        margin-right: 10px;
+    }
+
+    main .hero .section.left .content ul.main-use-case li{
+        padding: 5px;
+        font-size: 18px;
+        color: #8C4D45;
     }
 
     main .hero .section.right {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: 50px 50px 50px 10px;
         width: 50%;
         height: 450px;
@@ -215,10 +187,6 @@
     }
 
     main .hero .section.right .video-frame{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 10px;
         border: 5px dashed #F59182;
         border-radius: 15px;
@@ -235,25 +203,18 @@
     }
 
     main .stores{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 50px;
     }
 
     main .google-play {
         width: 250px;
         height: 100px;
-        display: flex;
-        justify-content: center;
         padding-bottom: 50px;
     }
 
     main .app-store{
         width: 250px;
         height: 100px;
-        display: inline-block;
-        justify-content: center;
     }
 
     main .google-play img{
@@ -281,8 +242,6 @@
     }
 
     .cards{
-        display: flex;
-        justify-content: center;
         gap: 50px;
     }
 
@@ -293,6 +252,10 @@
         overflow: hidden;
         width: 500px;
         transition: transform 0.2s;
+    }
+
+    .card li{
+        padding: 5px;
     }
 
     .card h2{
@@ -319,17 +282,17 @@
         margin-bottom: 10px;
     }
 
-    .card-content p{
-        font-size: 0.9rem;
+    .card-content ul.card-checklist{
+        font-size: 14px;
+        margin: 10px;
+        padding: 10px;
         color: #666;
-        margin-bottom: 10px;
     }
 
     .card-content a{
         text-decoration: none;
         color: #333;
         font-weight: bold;
-        display: inline-block;
         margin-top: 10px;
         font-size: 0.9rem;
         padding: 10px;
@@ -340,78 +303,82 @@
         background-color: #333;
         color: #fff;
     }
-
-    .games-we-have{
+    
+    .games-container{
         text-align: center;
-        padding-bottom: 50px;
+        max-width: 1200px;
+        margin: 0 auto; 
+        padding-bottom: 100px;
     }
 
-    .games-we-have h1{
+    .games-container h1{
         font-size: 50px;
         color: #F59182;
-        padding: 30px;
+        margin-bottom: 40px;
+        /* padding-top: 110px; */
     }
 
-    .games{
-        display: flex;
-        justify-content: space-around;
-        gap: 20px;
+    .game-cards{
+        gap: 50px;
     }
 
-    .game{
+    .game-card{
         background-color: #F8E2B4;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        width: 250px;
+        width: 500px;
         transition: transform 0.2s;
     }
 
-    .game:hover{
+    .game-card li{
+        padding: 5px;
+    }
+
+    .game-card h2{
+        color: #666;
+    }
+
+    .game-card:hover{
         transform: translateY(-15px);
     }
 
-    .game img{
-        width: 250px;
-        height: 250px;
+    .game-card img{
+        width: 100%;
+        height: 200px;
         object-fit: cover;
     }
 
-    .game-content{
+    .game-card-content{
         padding: 20px;
         text-align: left;
     }
 
-    .game-content h2{
+    .game-card-content h2{
         font-size: 1.2rem;
         margin-bottom: 10px;
+    }
+
+    .game-card-content ul.game-card-checklist{
+        font-size: 14px;
+        margin: 10px;
+        padding: 10px;
         color: #666;
     }
 
-    .game-content p{
-        font-size: 0.9rem;
-        color: #666;
-        margin-bottom: 10px;
-    }
-
-    .game-content a{
+    .game-card-content a{
         text-decoration: none;
-        color: #666;
+        color: #333;
         font-weight: bold;
-        display: inline-block;
         margin-top: 10px;
         font-size: 0.9rem;
         padding: 10px;
         border-radius: 5px;
     }
 
-    .game-content a:hover{
+    .game-card-content a:hover{
         background-color: #333;
         color: #fff;
-    }
-
-    .games-we-have .many-more{
-        font-size: 36px;
     }
 
     .benefits-container{
@@ -428,8 +395,6 @@
     }
 
     .benefits-container .cards{
-        display: flex;
-        justify-content: center;
         gap: 50px;
     }
 
@@ -462,27 +427,31 @@
         margin-bottom: 10px;
     }
 
-    .benefits-container .cards .card .card-content p{
-        font-size: 0.9rem;
-        color: #666;
-        margin-bottom: 10px;
-    }
-
     .benefits-container .cards .card .card-content a{
+        width: 10px;
+        height: 10px;
         text-decoration: none;
-        color: #333;
+        /* background-color: #333; */
+        color: var(--navbar-bg-color);
         font-weight: bold;
-        display: inline-block;
+        display: inline;
         margin-top: 10px;
-        font-size: 0.9rem;
-        padding: 10px;
-        border-radius: 5px;
+        font-size: 12px;
+        padding: 3px;
+        border-radius: 50%;
     }
 
     .benefits-container .cards .card .card-content a:hover{
         background-color: #333;
         color: #fff;
     }
+
+    footer{
+        background-color: var(--navbar-bg-color);
+        color: white;
+        font-size: 24px;
+    }
+
 
     @media screen and (max-width: 768px) {
         html,body{
@@ -541,11 +510,6 @@
 
         main .hero .section.left .content h2{
             font-size: 28px;
-        }
-
-        main .hero .section.left .content .mission-statement{
-            font-size: 16px;
-            width: 100%;
         }
 
         main .hero .section.right{
@@ -638,6 +602,11 @@
         }
     }
 
+    footer{
+        height: 16px;
+        font-size: 12px;
+    }
+
     @media screen and (max-width: 426px) {
         html,body{
             overflow-x: hidden;
@@ -696,11 +665,6 @@
         main .hero .section.left .content h2{
             font-size: 24px;
             margin-bottom: 5px;
-        }
-
-        main .hero .section.left .content .mission-statement{
-            font-size: 14px;
-            width: 100%;
         }
 
         main .hero .section.right{
@@ -824,11 +788,6 @@
         main .hero .section.left .content h2{
             font-size: 20px;
             margin-bottom: 5px;
-        }
-
-        main .hero .section.left .content .mission-statement{
-            font-size: 12px;
-            width: 100%;
         }
 
         main .hero .section.right{

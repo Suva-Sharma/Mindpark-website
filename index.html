@@ -10,48 +10,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vars.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="preload" href='https://fonts.googleapis.com/css?family=Varela+Round&display=swap' as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/images/website_background_2.webp" as="image" type="image/webp" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <div class="logo-content">
+    <nav class="flex justify-between fixed top-none right-none left-none">
+        <div class="logo flex justify-between">
+            <div class="logo-content flex justify-center items-center">
                 <a href="/index.html"><img src="/images/mindparklogo.webp" alt="Logo for MindPark, an app developed to help children with ADHD and/or Autism Spectrum Disorder" loading="lazy"></a>
                 <p><a href="/index.html">MindPark</a></p>
             </div>
         </div>
 
-        <ul class="sidebar">
-            <li class="cross-button" onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></li>
-            <li><a href="/index.html" class="active">Home</a></li>
-            <li><a href="/pages/contact_us.html">Contact Us</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank">Get the app now</a></li>
+        <ul class="sidebar fixed h-screen top-none right-none hidden flex-col justify-center items-start">
+            <li class="cross-button flex flex-col justify-center items-center" onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></li>
+            <li class="flex flex-col justify-center items-center"><a href="/index.html" class="active">Home</a></li>
+            <li class="flex flex-col justify-center items-center"><a href="/pages/contact_us.html">Contact Us</a></li>
+            <li class="flex flex-col justify-center items-center"><a href="https://play.google.com/store/apps/details?id=com.mindpark.app" target="_blank">Get the app now</a></li>
         </ul>
 
-        <ul class="nav-items">
+        <ul class="nav-items flex justify-between items-center">
             <li class="nav-item"><a href="/index.html" class="active">Home</a></li>
             <li class="nav-item"><a href="/pages/contact_us.html">Contact Us</a></li>
-            <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank"><img class="gp-button" src="/images/Google_Play-Icon-Logo.wine.svg" alt="Download the MindPark app now. This app was developed to help children with ADHD and/or Autism learn and grow."></a></li>
+            <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.mindpark.app" target="_blank"><img class="gp-button" src="/images/Google_Play-Icon-Logo.wine.svg" alt="Download the MindPark app now. This app was developed to help children with ADHD and/or Autism learn and grow."></a></li>
         </ul>
 
-        <div class="menu-button">
+        <div class="menu-button hidden">
             <a href="#" onclick="showSideBar()" role="button" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
         </div>
     </nav>
 
     <main>
-        <section class="hero">
-            <div class="section left">
+        <section class="hero flex">
+            <div class="section left flex">
                 <div class="content">
-                    <h1 class="heading">Learning Made Fun and Accessible for Children with ADHD and Autism</h1>
-                    <h2>Mission Statement</h2>
-                    <h3 class="mission-statement">At MindPark, our mission is to empower children with ADHD and Autism through engaging and innovative learning activities and games.</h3>
+                    <h1 class="heading">MindPark</h1>
+                    <h2>Learning Made Fun and Accessible for Children with ADHD and Autism</h2>
+                    <ul class="main-use-case">
+                        <li>Identify potential signs of ADHD or Autism Spectrum early.</li>
+                        <li>Fun games designed to improve thinking and behavioural skills.</li>
+                        <li>Monitor child's overall improvement and milestones.</li>
+                        <li>Access tips and resources to navigate everyday parenting challenges.</li>
+                    </ul>
                 </div>
             </div>
-            <div class="section right">
-                <div class="video-frame">
+            <div class="section right relative flex flex-col justify-center items-center">
+                <div class="video-frame relative flex justify-center items-center">
                     <video autoplay loop muted playsinline preload="auto" class="homepage-video">
                         <source src="/images/kids_classroom.webm" type="video/mp4">
                         <track kind="captions" srclang="en" label="English Captions">
@@ -62,99 +71,172 @@
             </div>
         </section>
 
-        <div class="stores">
-            <div class="google-play">
-                <a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank"><img id="google-play" src="/images/Google play button.svg" alt="MindPark download link for Google Play Store"></a>
+        <div class="stores flex justify-center items-center">
+            <div class="google-play flex justify-center">
+                <a href="https://play.google.com/store/apps/details?id=com.mindpark.app" target="_blank"><img id="google-play" src="/images/Google play button.svg" alt="MindPark download link for Google Play Store"></a>
             </div>
-            <div class="app-store">
+            <div class="app-store inline-block justify-center">
                 <a href="#"><img src="/images/app_store_logo.svg" alt="MindPark download link for App Store"></a>   
             </div>
         </div>
 
         <div class="container">
             <h1>Our App</h1>
-            <div class="cards">
+            <div class="cards flex justify-center">
                 <div class="card">
                     <img src="/images/behavioral_assessment_2.webp" alt="Image showing behavioral assessment section for kids with ADHD and/or Autism" loading="lazy">
-                    <div class="card-content">
+                    <div class="card-content inline-block">
                         <h2>Behavioral Assessment</h2>
-                        <p>This section contains a questionnaires that analyze whether the child has behavioral disorders such as ADHD or ASD.</p>
+                         <ul class="card-checklist">
+                            <li>Analyse your child's behaviour through expertly designed questionnaires.</li>
+                            <li>Identify potential early signs of ADHD or Autism Spectrum.</li>
+                            <li>Receive clear, parent-friendly reports to guide your next steps.</li>
+                            <li>Monitor behavioural changes over time. </li>
+                         </ul>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/cognitive_training_2.webp" alt="Image showing cognitive training section for kids with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
                         <h2>Cognitive Training</h2>
-                        <p>This section contains games that help the child in developing skills such as fine motor skills, executive skills, social skills, verbal skills and math skills.</p>
+                        <ul class="card-checklist">
+                            <li>Fun games to improve motor, thinking, decision-making, and problem-solving skills.</li>
+                            <li>Teaches social skills and interaction skills. </li>
+                            <li>Teaching your child to follow rules.</li>
+                            <li>Training for improving eye-contact.</li>
+                            <li>Makes learning numbers, counting, and basic math fun.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/adhd.webp" alt="Image showing result of behavioral assessment questionnaire for diagnosis of ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
-                        <h2>Behavioral Performance</h2>
-                        <p>This is a result of ADHD questionnaire for Autism Spectrum Disorder analysis.</p>
+                        <h2>Parents Corner</h2>
+                        <ul class="card-checklist">
+                            <li>Track your child's progress over time with reports.</li>
+                            <li>Access resources and tips for common parenting challenges.</li>
+                            <li>Stay informed with the latest research and insights on ADHD and autism.</li>
+                            <li>Add multiple child.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="games-we-have">
-            <h1>Some Games We Have</h1>
-            <div class="games">
-                <div class="game">
-                    <img src="/images/color_clash.webp" alt="Color clash" loading="lazy">
-                    <div class="game-content">
-                        <h2>Color Clash</h2>
-                        <p>In this game, we select the color of the word that appears on the screen.</p>
+        <div class="games-container">
+            <h1>Available Games</h1>
+            <div class="game-cards flex justify-center">
+                <div class="game-card">
+                    <img src="/images/behavioral_assessment_2.webp" alt="Image showing behavioral assessment section for kids with ADHD and/or Autism" loading="lazy">
+                    <div class="game-card-content">
+                        <h2>Thinking Skills</h2>
+                         <ul class="game-card-checklist">
+                            <li><strong>Color Clash</strong><br>Improve self-control and ignore distractions</li>
+                            <li><strong>Digit Dazzle</strong><br>Improves memory and the ability to remember patterns</li>
+                            <li><strong>Symbol Safari</strong><br>Improves visual recognition and attention</li>
+                            <li><strong>Alert Alphas</strong><br>Improves impulse control and attention</li>
+                         </ul>
                     </div>
                 </div>
-                <div class="game">
-                    <img src="/images/voiceloon.webp" alt="Voiceloon" loading="lazy">
-                    <div class="game-content">
-                        <h2>Voiceloon</h2>
-                        <p>In this game, we blow on the phone to make the balloon go high.</p>
+                <div class="game-card">
+                    <img src="/images/adhd.webp" alt="Image showing result of behavioral assessment questionnaire for diagnosis of ADHD and/or Autism" loading="lazy">
+                    <div class="game-card-content">
+                        <h2>Social Skills</h2>
+                        <ul class="game-card-checklist">
+                            <li><strong>Simon Says</strong><br>Improves listening skills and self-control</li>
+                            <li><strong>Mood Magic</strong><br>Improves emotional recognition and social awareness</li>
+                            <li><strong>Gaze Maze</strong><br>Improves attention, focus and social bonding</li>
+                            <li><strong>Jungle Jingles</strong><br>Improves animal recognition and auditory processing</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="game">
-                    <img src="/images/number_counting.webp" alt="Number counting" loading="lazy">
-                    <div class="game-content">
-                        <h2>Number Counting</h2>
-                        <p>In this game, we count the number of items present on the screen and select the right number option.</p>
+                <div class="game-card">
+                    <img src="/images/adhd.webp" alt="Image showing result of behavioral assessment questionnaire for diagnosis of ADHD and/or Autism" loading="lazy">
+                    <div class="game-card-content">
+                        <h2>Fine Motor Skills</h2>
+                        <ul class="game-card-checklist">
+                            <li><strong>Pixel Puzzle</strong><br>Improves focus and attention to detail</li>
+                            <li><strong>Track Titans</strong><br>Improves sequencing skills and hand-eye coordination</li>
+                            <li><strong>Picture Playtime</strong><br>Improves categorization and visual matching skills</li>
+                            <li><strong>Puzzle Paradise</strong><br>Improves puzzle-solving skills and spatial awareness</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="game">
-                    <img src="/images/simon_says.webp" alt="Simon says" loading="lazy">
-                    <div class="game-content">
-                        <h2>Simon Says</h2>
-                        <p>In this game, player is supposed to do a task only if Simon says to do it.</p>
+                <div class="game-card">
+                    <img src="/images/cognitive_training_2.webp" alt="Image showing cognitive training section for kids with ADHD and/or Autism" loading="lazy">
+                    <div class="game-card-content">
+                        <h2>Other Skills</h2>
+                        <ul class="game-card-checklist">
+                            <li><strong>Counting Castle</strong> <br> Improves basic counting and numerical skills</li>
+                            <li><strong>Voiceloon</strong> <br> Improves voice control and pre-verbal skills</li>
+                            <li><strong>Maze Magic</strong> <br> Improves problem-solving and critical thinking skills</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <h1 class="many-more">And many more...</h1>
         </div>
 
         <div class="benefits-container">
-            <h1>Benefits</h1>
-            <div class="cards">
+            <h1>What does the latest research say about computerised cognitive games?</h1>
+            <div class="cards flex justify-center">
                 <div class="card">
                     <img src="/images/enhance_cognitive_skills.webp" alt="This app helps enhance the cognitive skills of children with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
-                        <h2>Enhances Cognitive Skills</h2>
-                        <p>Stimulates critical thinking and problem-solving, developing strong analytical abilities through puzzles and symbol identification.</p>
+                        <h2>Improves Focus and Attention</h2>
+                        <ul class="card-checklist">
+                            <li>Computer games can improve attention spans in children with ADHD, boosting academic performance.
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8857637/" target="_blank"><span>1</span></a>
+                                <a href="https://www.nature.com/articles/s41380-023-02000-7" target="_blank"><span>5</span></a>
+                            </li>
+                            <li>The games offer a fun, interactive way to practice attention skills.
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9809031/" target="_blank"><span>2</span></a>
+                                <a href="https://www.redalyc.org/journal/798/79875789004/html/" target="_blank"><span>6</span></a>
+                            </li>
+                            <li>Games adjust difficulty to keep children challenged without frustration.
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8857637/" target="_blank"><span>1</span></a>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7575028/" target="_blank"><span>6</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/attention_span.webp" alt="This app helps improve focus and attention span of children with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
-                        <h2>Improves Focus and Attention</h2>
-                        <p>Boosts attention span by engaging children in fast-paced, interactive games.</p>
+                        <h2>Impulse and Emotion Control</h2>
+                        <ul class="card-checklist">
+                            <li>Cognitive games help children improve impulse control, aiding ADHD management.
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8857637/" target="_blank"><span>1</span></a>
+                                <a href="https://www.nature.com/articles/s41380-023-02000-7" target="_blank"><span>5</span></a>
+                            </li>
+                            <li>Games teach children to manage emotions, reducing outbursts and improving social skills.
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9809031/" target="_blank"><span>2</span></a>
+                                <a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/s12888-022-04501-1" target="_blank"><span>3</span></a>
+                            </li>
+                            <li>Repetitive gameplay reinforces self-control and positive behaviors.
+                                <a href="https://www.redalyc.org/journal/798/79875789004/html/" target="_blank"><span>4</span></a>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7575028/" target="_blank"><span>6</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card">
                     <img src="/images/fine_motor.webp" alt="This app helps boost fine motor skills of children with ADHD and/or Autism" loading="lazy">
                     <div class="card-content">
-                        <h2>Boosts Fine Motor Skills</h2>
-                        <p>Develops hand-eye coordination and dexterity through interactive tasks like tapping, dragging, and drawing.</p>
+                        <h2>Reduces Anxiety</h2>
+                        <ul class="card-checklist">
+                            <li>Games can lower anxiety in children with ADHD and ASD by boosting their sense of achievement.
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9809031/" target="_blank"><span>2</span></a>
+                                <a href="https://www.nature.com/articles/s41380-023-02000-7" target="_blank"><span>5</span></a>
+                            </li>
+                            <li>Virtual environments let children explore emotions and social situations without real-world risks.
+                                <a href="https://bmcpsychiatry.biomedcentral.com/articles/10.1186/s12888-022-04501-1" target="_blank"><span>3</span></a>
+                                <a href="https://www.redalyc.org/journal/798/79875789004/html/" target="_blank"><span>4</span></a>
+                            </li>
+                            <li>Reward systems in games reduce performance pressure and help ease anxiety.
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8857637/" target="_blank"><span>1</span></a>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7575028/" target="_blank"><span>6</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -162,6 +244,10 @@
         
     </main>
 
+    <footer class="flex justify-center">
+        © Copyright, 2024, BrainCast Technologies
+    </footer>
+    
     <script src="/js/script.js" defer></script>
 </body>
 </html>
