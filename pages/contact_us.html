@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/css/contact_us.css">
+    <link rel="stylesheet" href="css/vars.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="preload" href='https://fonts.googleapis.com/css?family=Varela+Round&display=swap' as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/images/website_background_2.webp" as="image" type="image/webp" crossorigin="anonymous">
 
@@ -17,22 +20,22 @@
     
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <div class="logo-content">
+    <nav class="flex justify-between fixed top-none left-none right-none">
+        <div class="logo flex justify-between">
+            <div class="logo-content flex justify-center items-center">
                 <a href="/index.html"><img src="/images/mindparklogo.webp" alt="logo"></a>
                 <p><a href="/index.html">MindPark</a></p>
             </div>
         </div>
 
-        <ul class="sidebar">
+        <ul class="sidebar fixed top-none right-none h-screen hidden flex-col items-start justify-center">
             <li class="cross-button" onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></li>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/pages/contact_us.html" class="active">Contact Us</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank">Get the app now</a></li>
+            <li class="flex flex-col justify-center items-center"><a href="/index.html">Home</a></li>
+            <li class="flex flex-col justify-center items-center"><a href="/pages/contact_us.html" class="active">Contact Us</a></li>
+            <li class="flex flex-col justify-center items-center"><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank">Get the app now</a></li>
         </ul>
 
-        <ul class="nav-items">
+        <ul class="nav-items flex justify-between items-center">
             <li class="nav-item"><a href="/index.html">Home</a></li>
             <li class="nav-item"><a href="/pages/contact_us.html" class="active">Contact Us</a></li>
             <li class="nav-item"><a href="https://play.google.com/store/apps/details?id=com.mindpark.mindgames&hl=en_US" target="_blank"><img class="gp-button" src="/images/Google_Play-Icon-Logo.wine.svg" alt="Download the MindPark app now. This app was developed to help children with ADHD and/or Autism learn and grow."></a></li>
@@ -43,11 +46,11 @@
         </div>
     </nav>
 
-    <main>
+    <main class="flex flex-row">
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="form flex flex-col items-center w-full">
             <h1>Get in touch with us</h1>
-            <div class="contact-form">
+            <div class="contact-form w-half flex flex-col justify-center">
                 <input type="hidden" name="access_key" value="68d468b1-7cce-453f-8e28-e3e688f0ad69">
                 <div class="full-name">
                     <label for="fullName">Full name</label>
@@ -66,12 +69,16 @@
                     <textarea id="text-area" rows="10" cols="33" name="message" placeholder="Enter your message here" class="message" onchange="handleInput(event)"></textarea>
                 </div>
 
-                <div class="submit-btn">
+                <div class="submit-btn flex justify-center items-center">
                     <button type="submit">Submit</button>
                 </div>
             </div>
         </form>
     </main>
+
+    <footer class="flex justify-center">
+        © Copyright, 2024, BrainCast Technologies
+    </footer>
 
     <script src="/js/script.js"></script>
 </body>

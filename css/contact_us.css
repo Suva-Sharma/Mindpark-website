@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url('vars.css');
+@import url('layout.css');
+@import url('theme.css');
 
 *{
     margin: 0;
@@ -20,29 +22,15 @@ body{
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
     background-color: var(--navbar-bg-color);
     padding: 20px;
     font-size: 18px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 1000;
 }
 
 nav .logo {
-    display: flex;
-    justify-content: space-between;
     border-radius: 50%;
     margin-left: 20px;
-}
-
-nav .logo .logo-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav .logo .logo-content a{
@@ -62,19 +50,11 @@ nav .logo img {
 }
 
 nav .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
     width: 250px;
     z-index: 999;
     background-color: rgba(168,230,207,0.5);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     padding: 20px;
     margin-top: auto;
     margin-bottom: auto;
@@ -82,14 +62,9 @@ nav .sidebar {
 
 nav .sidebar li {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     list-style: none;
     margin: 10px 0px;
     text-align: left;
-    
 }
 
 nav .sidebar a {
@@ -110,9 +85,6 @@ nav .menu-button{
 }
 
 nav .nav-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     list-style: none;
     color: white;
     gap: 60px;
@@ -141,7 +113,7 @@ nav .nav-items .nav-item a:hover {
 }
 
 nav .sidebar li a.active {
-    color: #F59182;
+    color: var(--heading-text-color);
     font-weight: bold;
 }
 
@@ -162,30 +134,17 @@ body{
 }
 
 main {
-    display: flex;
-    flex-direction: row;
     margin-top: 130px;
 }
 
-.form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .form h1 {
-    color: #F59182;
+    color: var(--heading-text-color);
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 50px;
 }
 
 .form .contact-form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 10px;
     gap: 10px;
 }
@@ -208,9 +167,6 @@ main {
 }
 
 .form .contact-form .submit-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 50px;
 }
 
@@ -271,6 +227,13 @@ main {
     font-size: 16px;
 }
 
+footer{
+    background-color: var(--navbar-bg-color);
+    color: white;
+    font-size: 12px;
+    height: 16px;
+}
+
 @media screen and (max-width: 768px){
 
     nav .nav-items {
@@ -314,7 +277,7 @@ main {
     }
 
     .form h1 {
-        font-size: 40px;
+        font-size: 50px;
         margin-top: 150px;
         margin-bottom: 40px;
     }
